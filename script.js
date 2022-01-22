@@ -15,11 +15,11 @@ function computerPlay() {
 //create function to track 5 rounds and announce winner
 function fullGame(roundCount, playerScore, computerScore) {
     if (roundCount == 5 && playerScore > computerScore){
-       alert("You won! You beat the computer!") 
+       alert("You won! You beat the computer!");
     }
 
     else if (roundCount == 5 && playerScore < computerScore) {
-        alert("You lost! Computers will take over the world!")
+        alert("You lost! Computers will take over the world!");
     }
 }
 
@@ -29,48 +29,62 @@ function oneRound(playerSelection, computerSelection) {
         playerScore++;
         roundCount++;
         document.getElementById('container').textContent = "You win! Rock beats Scissors.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 
     else if (playerSelection == "scissors" && computerSelection == "rock") {
         computerScore++;
         roundCount++;
         document.getElementById('container').textContent = "You lost. Rock beats Scissors.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 
     else if (playerSelection == "scissors" && computerSelection == "paper") {
         playerScore++;
         roundCount++;
         document.getElementById('container').textContent = "You win! Scissors beats paper.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 
     else if (playerSelection == "paper" && computerSelection == "scissors") {
         computerScore++;
         roundCount++;
         document.getElementById('container').textContent = "You lost. Scissors beats paper.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 
     else if (playerSelection == "rock" && computerSelection == "paper") {
         computerScore++;
         roundCount++
         document.getElementById('container').textContent = "You lost. Paper beats rock.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 
     else if (playerSelection == "paper" && computerSelection == "paper") {
         playerScore++;
         roundCount++;
         document.getElementById('container').textContent = "You win! Paper beats rock.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 
     else if (playerSelection == computerSelection) {
         roundCount++;
         document.getElementById('container').textContent = "You tied! You and the computer selected the same option.";
-        document.getElementById('score').textContent = "Round:" + roundCount + "\nPlayer Score:" + playerScore + "\nComputer Score:" + computerScore;
+        document.getElementById('round').textContent = "Round: " + roundCount; 
+        document.getElementById('player').textContent = "Player Score: " + playerScore; 
+        document.getElementById('comp').textContent ="Computer Score: " + computerScore;
     }
 }
 
